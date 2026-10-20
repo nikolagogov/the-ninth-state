@@ -1,0 +1,58 @@
+.geo-concept-page { --gc-line: #293c43; --gc-muted: #94a6a8; --gc-bright: #e7e8e1; width: 100%; height: 100dvh; min-height: 0; overflow: hidden; display: grid; grid-template-rows: auto minmax(0,1fr) 87px; background: #080f14; color: var(--gc-bright); }
+.geo-concept-header { z-index: 2; min-height: 58px; padding: 7px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #26363c; background: linear-gradient(90deg,#0d171e,#0b141a 58%,#0d171e); }
+.geo-concept-brand { display: flex; align-items: center; gap: 10px; font: 700 10px 'Manrope',sans-serif; letter-spacing: 1.4px; }.geo-concept-brand>span { color: #f0eee6; }.geo-concept-brand i { color: #53676c; font-style: normal; }.geo-concept-brand strong { color: #aeb9b6; }.geo-concept-brand em { margin-left: 6px; padding: 5px 7px; border: 1px solid #435258; border-radius: 3px; color: #a5b2b1; font: 700 8px 'DM Sans',sans-serif; letter-spacing: .8px; }
+.geo-concept-actions { display: flex; align-items: center; gap: 7px; }.geo-concept-actions button,.geo-concept-actions a { min-height: 31px; padding: 0 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #33474e; border-radius: 4px; background: #111d23; color: #bfcbca; font: 600 10px 'DM Sans',sans-serif; text-decoration: none; cursor: pointer; }.geo-concept-actions button:hover,.geo-concept-actions a:hover { border-color: #71858a; color: #f0f2ed; }.geo-concept-actions button.pressed { border-color: #64767a; background: #1c2a30; }.geo-concept-actions kbd { padding: 2px 4px; border: 1px solid #3d4e53; border-radius: 3px; color: #8e9d9e; font: 9px 'DM Sans',sans-serif; }
+.geo-concept-map { position: relative; min-height: 0; overflow: hidden; background: radial-gradient(ellipse at 49% 49%,#142831,#0a141a 69%,#081117); }.geo-concept-map>svg { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; outline: none; }.geo-concept-map>svg:active { cursor: grabbing; }.geo-concept-map>svg:focus-visible { outline: 2px solid #84999b; outline-offset: -4px; }
+.concept-graticule { fill: none; stroke: #9bb0b1; stroke-width: .8; opacity: .12; }.concept-land path { stroke: #d0d0c3; stroke-width: 1.7; vector-effect: non-scaling-stroke; }.concept-land path.concept-aurelia-coast { stroke: #d7c8a4; stroke-width: 2.3; }.concept-inner-waters path { vector-effect: non-scaling-stroke; }.concept-inner-waters path[fill="none"] { vector-effect: non-scaling-stroke; }.concept-labels { pointer-events: none; }.concept-continent-label { fill: #f1f1e8; stroke: #172329; stroke-width: 3.5px; paint-order: stroke; font: 700 13px 'Manrope',sans-serif; letter-spacing: .15em; text-anchor: middle; }.concept-water-label { fill: #afc0c0; stroke: #112027; stroke-width: 3px; paint-order: stroke; font: 600 8px 'Manrope',sans-serif; letter-spacing: .1em; text-anchor: middle; }.concept-map-edge-labels { fill: #71868a; font: 600 9px 'Manrope',sans-serif; letter-spacing: .2em; text-anchor: middle; pointer-events: none; }
+.geo-concept-title { position: absolute; top: 25px; left: 32px; max-width: 400px; pointer-events: none; text-shadow: 0 2px 14px #050a0c; }.geo-concept-title span { color: #aab5b1; font-size: 8px; font-weight: 700; letter-spacing: 1.4px; }.geo-concept-title h1 { margin: 9px 0 4px; color: #f0f0e9; font: 600 clamp(22px,2.6vw,34px)/1.15 'Manrope',sans-serif; letter-spacing: -.6px; }.geo-concept-title p { margin: 0; color: #a3b0b1; font-size: 10px; }
+.geo-concept-map-tools { position: absolute; right: 20px; bottom: 18px; display: flex; gap: 4px; }.geo-concept-map-tools button { min-width: 30px; height: 29px; padding: 0 8px; border: 1px solid #43575d; border-radius: 4px; background: #0c171ddc; color: #d7ded9; font-size: 12px; cursor: pointer; }.geo-concept-map-tools button:hover { border-color: #9faeaa; }.geo-concept-scale { position: absolute; right: 20px; top: 20px; color: #849699; font: 600 8px 'Manrope',sans-serif; letter-spacing: 1px; }.geo-concept-scale i { width: 25px; display: inline-block; margin: 0 8px 2px; border-top: 1px solid #9caaa7; }
+.geo-concept-footer { padding: 11px 28px 8px; border-top: 1px solid #26363c; background: #0c151b; }.concept-legend { display: flex; align-items: center; gap: 19px; color: #b1bfbd; font-size: 9px; }.concept-legend span { display: inline-flex; align-items: center; gap: 6px; }.concept-legend i { width: 12px; height: 8px; display: inline-block; border: 1px solid #c1c3b7; background: #89928c; }.concept-legend i.island-key { width: 8px; height: 8px; border-radius: 50%; }.concept-legend i.sea-key { border-color: #6e8991; background: #19303a; }.concept-count { position: absolute; right: 28px; bottom: 54px; color: #91a09f; font: 700 8px 'Manrope',sans-serif; letter-spacing: .85px; }.concept-count b { padding: 0 5px; color: #52656a; }.geo-concept-footer p { margin: 7px 0 0; color: #77898c; font-size: 9px; }
+@media (max-width: 700px) { .geo-concept-page { grid-template-rows: auto minmax(0,1fr) 91px; }.geo-concept-header { min-height: 65px; padding: 8px 12px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 7px; }.geo-concept-brand { gap: 7px; font-size: 8px; }.geo-concept-brand em { margin-left: auto; padding: 4px; font-size: 7px; }.geo-concept-actions { width: 100%; gap: 5px; }.geo-concept-actions button,.geo-concept-actions a { min-height: 25px; padding: 0 7px; font-size: 9px; }.geo-concept-actions a { margin-left: auto; }.geo-concept-title { top: 14px; left: 13px; max-width: 250px; }.geo-concept-title h1 { margin-top: 6px; font-size: 20px; }.geo-concept-title p { max-width: 225px; font-size: 9px; }.geo-concept-scale { top: 13px; right: 9px; font-size: 7px; }.geo-concept-scale i { width: 13px; margin: 0 4px 2px; }.concept-continent-label { font-size: 9px; letter-spacing: .08em; }.concept-water-label { font-size: 6px; }.geo-concept-map-tools { right: 9px; bottom: 9px; }.geo-concept-map-tools button { min-width: 27px; height: 27px; }.geo-concept-footer { padding: 9px 12px 7px; }.concept-legend { gap: 10px; font-size: 8px; }.concept-count { position: static; margin-top: 7px; font-size: 7px; }.geo-concept-footer p { margin-top: 5px; font-size: 8px; } }
+@media (max-width: 400px) { .geo-concept-brand { letter-spacing: .7px; }.geo-concept-brand em { font-size: 6px; }.geo-concept-actions { gap: 3px; }.geo-concept-actions button,.geo-concept-actions a { padding: 0 5px; font-size: 8px; }.geo-concept-footer p { max-width: 285px; line-height: 1.35; } }
+.geo-terrain-modes { display: inline-flex; padding: 2px; border: 1px solid #33474e; border-radius: 5px; background: #0a141a; }
+.geo-concept-loading { min-height: 100dvh; display: grid; place-items: center; background: #080f14; color: #b1bfbd; font: 600 13px 'Manrope',sans-serif; }
+.geo-terrain-modes button { min-height: 27px; border: 0; background: transparent; }
+.geo-terrain-modes button.pressed { background: #26383e; color: #f0f2ed; }
+.geo-concept-actions { flex-wrap: wrap; justify-content: flex-end; }
+.geo-terrain-modes { flex-wrap: wrap; }
+.geo-terrain-compare { display: inline-flex; padding: 2px; border: 1px solid #33474e; border-radius: 5px; background: #0a141a; }
+.geo-terrain-compare button { min-height: 27px; border: 0; background: transparent; }
+.geo-terrain-compare button.pressed { background: #26383e; color: #f0f2ed; }
+.geo-terrain-compare button:disabled { opacity: .42; cursor: not-allowed; }
+.concept-legend > b { margin-left: auto; color: #8d9e9e; font: 700 8px 'Manrope',sans-serif; letter-spacing: .8px; }
+.morphology-legend i { width: 12px; height: 8px; border: 0; }
+.morphology-legend i.morph-shelf { background: linear-gradient(90deg,#0c2944,#2f6f7e); }
+.morphology-legend i.morph-plain { background: linear-gradient(90deg,#7d9f73,#97a370); }
+.morphology-legend i.morph-hill { background: linear-gradient(90deg,#9f8f67,#b08363); }
+.morphology-legend i.morph-mountain { background: #b5785d; }
+.morphology-legend i.morph-volcanic { background: #965345; }
+.terrain-legend.slope i { background: linear-gradient(90deg,#19444b,#2e696f,#6b9482,#bda273,#da7853,#eed6b2); }
+.terrain-legend { display: flex; align-items: center; gap: 14px; }
+.terrain-scale { position: relative; flex: 1; width: min(480px,42vw); min-width: 260px; height: 23px; margin-right: 8px; }
+.terrain-scale > i { position: absolute; left: 0; top: 0; width: 100%; height: 8px; border: 0; }
+.terrain-scale > span { position: absolute; top: 11px; transform: translateX(-50%); color: #b1bfbd; font-size: 8px; white-space: nowrap; }
+.terrain-scale > span:first-of-type { transform: none; }
+.terrain-scale > span:last-child { transform: translateX(-100%); }
+.terrain-legend.elevation .terrain-scale > i,.terrain-legend.shaded-relief .terrain-scale > i { background: linear-gradient(90deg,#08182f 0%,#0b2540 11.2%,#11374f 22.4%,#174c63 30.8%,#236577 39.2%,#36818b 46.5%,#539997 50.3%,#678469 50.4%,#84976f 53.9%,#a09e6f 57.8%,#ad9369 62.8%,#a47f62 69.4%,#b79d82 78.3%,#ede6d1 100%); }
+.terrain-legend.bathymetry .terrain-scale > i { background: linear-gradient(90deg,#08182f 0%,#0b2540 22.2%,#11374f 44.4%,#174c63 61.1%,#236577 77.8%,#36818b 92.2%,#539997 100%); }
+.terrain-legend.slope .terrain-scale > i { background: linear-gradient(90deg,#19444b 0%,#2e696f 6.7%,#6b9482 15.6%,#bda273 31.1%,#da7853 61.1%,#eed6b2 100%); }
+.terrain-coast-overlay path { fill-opacity: 0; stroke: #dddcc8; stroke-width: 1.1; }
+.terrain-coast-overlay path.concept-aurelia-coast { stroke: #f0d28e; stroke-width: 1.8; }
+.terrain-legend { min-width: min(700px, 65vw); }
+.terrain-legend i { width: 42px; height: 8px; border: 0; background: linear-gradient(90deg,#081931,#123f5b,#327b91,#509997,#688b64,#ad9d70,#e7e4d6); }
+.terrain-legend.bathymetry i { background: linear-gradient(90deg,#081931,#123f5b,#327b91,#509997,#586b59); }
+.terrain-legend b { margin-left: auto; color: #8d9e9e; font: 700 8px 'Manrope',sans-serif; letter-spacing: .8px; }
+.geo-hydrology-layers { display: flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid #2b414b; border-radius: 5px; background: #0c171e; }
+.geo-hydrology-layers button { padding: 5px 7px; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #819499; font: 600 8px 'Manrope',sans-serif; white-space: nowrap; cursor: pointer; }
+.geo-hydrology-layers button.pressed { border-color: #34616b; background: #18303a; color: #bfe4e1; }
+.concept-hydrology { pointer-events: none; }
+.hydro-main-river { fill: none; stroke: #73d8e5; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; opacity: .96; filter: drop-shadow(0 0 2px #163b49); }
+.hydro-tributary { fill: none; stroke: #83bfc9; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; opacity: .78; }
+.hydro-lake { fill: #48aabc; stroke: #b8eff1; stroke-width: .8; opacity: .92; }
+.hydro-delta { fill: #e6cf91; stroke: #fff0bd; stroke-width: .6; opacity: .95; }
+.hydrology-legend .hydro-basin-key { background: #527c8d; border-color: #79a8b4; }
+.hydrology-legend .hydro-main-key { height: 2px; border: 0; background: #73d8e5; }
+.hydrology-legend .hydro-tributary-key { height: 1px; border: 0; background: #83bfc9; }
+.hydrology-legend .hydro-lake-key { width: 10px; height: 7px; border-radius: 50%; border-color: #b8eff1; background: #48aabc; }
+.hydrology-legend .hydro-delta-key { width: 0; height: 0; border: 6px solid transparent; border-bottom-color: #e6cf91; background: transparent; }
+@media (max-width: 700px) { .geo-concept-actions { flex-wrap: wrap; }.geo-terrain-modes { order: 0; }.terrain-legend { min-width: 0; flex-wrap: wrap; gap: 6px; }.terrain-legend i { width: 20px; }.terrain-legend b { display: none; } }
